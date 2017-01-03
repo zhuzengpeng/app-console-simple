@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false" scan="true" scanPeriod="60 seconds">
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %p [%t][%c] - &lt;%m&gt;%n</pattern>
+		</encoder>
+	</appender>
+
+	<root>
+		<level value="DEBUG" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+	<logger name="org.springframework.aop.framework.Cglib2AopProxy" level="ERROR" />
+	<logger name="com.thinkgem.jeesite" level="DEBUG" />
+	<logger name="com.thinkgem.jeesite.common.security.shiro" level="WARN" />
+</configuration>

@@ -8,8 +8,9 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.Configuration;
-import org.apache.log4j.Logger;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.NestedIOException;
 
 /**
@@ -20,7 +21,7 @@ import org.springframework.core.NestedIOException;
  */
 public class Runnable implements java.lang.Runnable {
 
-	public static Logger log = Logger.getLogger(Runnable.class);
+	public static Logger log = LoggerFactory.getLogger(Runnable.class);
 
 	private String location;
 	private Configuration configuration;
