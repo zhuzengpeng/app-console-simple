@@ -19,14 +19,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Comment;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
@@ -236,8 +229,8 @@ public class ExportExcel {
 		Map<String, CellStyle> styles = new HashMap<String, CellStyle>();
 		
 		CellStyle style = wb.createCellStyle();
-		style.setAlignment(CellStyle.ALIGN_CENTER);
-		style.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
+		style.setAlignment(HorizontalAlignment.CENTER);
+		style.setVerticalAlignment(VerticalAlignment.CENTER);
 		Font titleFont = wb.createFont();
 		titleFont.setFontName("Arial");
 		titleFont.setFontHeightInPoints((short) 16);
@@ -246,7 +239,7 @@ public class ExportExcel {
 		styles.put("title", style);
 
 		style = wb.createCellStyle();
-		style.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
+		style.setVerticalAlignment(VerticalAlignment.CENTER);
 		style.setBorderRight(CellStyle.BORDER_THIN);
 		style.setRightBorderColor(IndexedColors.GREY_50_PERCENT.getIndex());
 		style.setBorderLeft(CellStyle.BORDER_THIN);
