@@ -221,7 +221,7 @@
 				</div>
 			</div>
 		    <div id="footer" class="row-fluid">
-	            Copyright &copy; 2012-${fns:getConfig('copyrightYear')} ${fns:getConfig('productName')} - Powered By <a href="http://oa.yitong.com.cn/" target="_blank">上海屹通</a> ${fns:getConfig('version')}
+	            Copyright &copy; 2012-${fns:getConfig('copyrightYear')} ${fns:getConfig('productName')} - Powered By <a href="http://www.baidu.com" target="_blank">**公司</a> ${fns:getConfig('version')}
 			</div>
 		</div>
 	</div>
